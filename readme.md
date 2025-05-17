@@ -37,3 +37,5 @@ The following five sanctions sources were used to extract data:
 - URL : (https://www.seco.admin.ch/seco/en/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zusammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/sanktionen-embargos.html)
 - Format :XML
 - Description : Contains individuals and entities subject to Switzerland sanctions
+
+## Assumptions Made While Transforming Data
