@@ -1,0 +1,41 @@
+[
+  {
+    "url": "https://scsanctions.un.org/resources/xml/en/consolidated.xml?_gl=1*1g2i528*_ga*MjA4MDU1NDIxOS4xNzQ2NDQxOTk0*_ga_TK9BQL5X7Z*czE3NDY1OTE2MTQkbzUkZzAkdDE3NDY1OTE2MTQkajAkbDAkaDA.*_ga_SCSJZ3XC0L*czE3NDY1OTE2MTQkbzUkZzAkdDE3NDY1OTE2MTQkajAkbDAkaDA.",
+    "format": "xml",
+    "sanction_type": "UN",
+    "parser":"un",
+    "local": false
+  },
+  {
+    "path":"data/uk_predicted.csv",
+    "format":"csv",
+    "sanction_type": "uk",
+    "parser":"uk",
+    "local":true
+  },
+  {
+    "path": "data/consolidated.xml",
+    "format": "xml",
+    "sanction_type": "USOFAC-Consolidated",
+    "parser":"ofac",
+    "local": true
+  },
+  {
+    "path": "data/sdn.xml",
+    "format": "xml",
+    "sanction_type": "USOFAC-SDN",
+    "parser":"ofac",
+    "local": true
+  },
+  {
+    "path":"data/seco.xml",
+    "format":"xml",
+    "sanction_type":"Swizerland",
+    "parser":"swiss",
+    "local":true
+
+  }
+
+]
+
+  
