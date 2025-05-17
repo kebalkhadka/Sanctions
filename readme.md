@@ -47,7 +47,7 @@ The following five sanctions sources were used to extract data:
 3. **Duplicate Handling**:
    - Entities appearing in multiple sources (e.g., same individual in UN and OFAC) were assigned unique `entity_id` values unless clear evidence (e.g., identical names and nationalities) indicated they were the same entity.
 4. **Handling Ambiguous or Multi-Valued Fields**:
-   -Assumed that fields with multiple values (e.g., multiple nationalities in EU sanctions) would be split into separate rows in the nationalities table, prioritizing normalization over storing comma-separated values in a single field.
+   - Assumed that fields with multiple values (e.g., multiple nationalities in EU sanctions) would be split into separate rows in the nationalities table, prioritizing normalization over storing comma-separated values in a single field.
 
 ## Instructions to Restore the .sql Dump using Mysql workbench
 
