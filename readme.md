@@ -39,3 +39,22 @@ The following five sanctions sources were used to extract data:
 - Description : Contains individuals and entities subject to Switzerland sanctions
 
 ## Assumptions Made While Transforming Data
+
+1. **Unified Schema Mapping**:
+   - Fields like `name`, `nationality`, and `sanction_type` were mapped from source-specific fields (e.g., UN’s `FULL_NAME` to `name`). If a field was missing, it was set to NULL or “Unknown” (e.g., `alias` in some records).
+2. **Missing Data Handling**:
+   - For UK’s `designation` column (54% missing), a linear logistic model was trained on non-missing data using features from `name` (TF-IDF encoded) and `additional_info` (text features). Predicted values were used to fill missing entries. Acurracy of 69% was obtained.
+3. **Duplicate Handling**:
+   - Entities appearing in multiple sources (e.g., same individual in UN and OFAC) were assigned unique `entity_id` values unless clear evidence (e.g., identical names and nationalities) indicated they were the same entity.
+4. **Handling Ambiguous or Multi-Valued Fields**
+   -Assumed that fields with multiple values (e.g., multiple nationalities in EU sanctions) would be split into separate rows in the nationalities table, prioritizing normalization over storing comma-separated values in a single field.
+
+## Instructions to Restore the .sql Dump using Mysql workbench
+
+To restore the `sanction.sql` database dump to a MySQL instance, follow these steps:
+
+1. **Ensure MySQL is Installed**:
+
+   - Verify MySQL Server is running on your system.
+
+2. \*\*
