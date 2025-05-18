@@ -115,15 +115,40 @@ Below are the sample query to explore the data:
    LIMIT 5;
    ```
 
-```
+## Instructions to Restore the .sql Dump
 
-## Instructions to Restore the .sql Dump using Mysql workbench
-
-To restore the `sanction.sql` database dump to a MySQL instance, follow these steps:
+To restore the `sanctionwatch.sql` database dump to a MySQL instance, follow these steps:
 
 1. **Ensure MySQL is Installed**:
 
- - Verify MySQL Server is running on your system.
+   - Verify MySQL Server is running on your system.
 
-2. \*\*
-```
+2. **Create a New Schema**
+
+   - Open MySQL Workbench or use the command line to create a new schema
+   - eg: restored_sanctions
+
+3. **Edit the SQL Dump File**
+
+   - Edit the mysql dump file
+     - Find the line
+     ```sql
+     USE sanctions;
+     ```
+     - Replace it with
+     ```sql
+     USE restored_sanctions;
+     ```
+   - Save the file
+
+4. **Go to server**
+
+   - Click on Data import
+   - Click on Import from self contained file and provide the path
+   - Click import
+
+5. **Verify Tables**
+
+   - Open MySQL Workbench.
+   - Go to the restored_sanctions schema.
+   - Click "Refresh" to view imported tables.
